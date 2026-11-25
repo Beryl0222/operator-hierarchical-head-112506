@@ -1,0 +1,8 @@
+{
+  "seed": 127,
+  "leaves": 8192,
+  "depth": 16,
+  "features": 64,
+  "batch": 512,
+  "max_workspace_bytes": 16777216
+}

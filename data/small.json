@@ -1,0 +1,171 @@
+{
+  "product": "可变分类树的部分标签似然与预测解释",
+  "nature": "合成演练资料，不包含真实人员、设备或训练数据",
+  "objects": {
+    "tree": {
+      "revision": "tree-a",
+      "root": "all",
+      "children": {
+        "all": [
+          "hardware",
+          "software"
+        ],
+        "hardware": [
+          "sensor",
+          "chip"
+        ],
+        "software": [
+          "model",
+          "tool"
+        ]
+      }
+    },
+    "annotations": [
+      {
+        "annotation_id": "a0",
+        "document_id": "doc-0",
+        "issued_tree": "tree-a",
+        "allowed_leaf_ids": [
+          "sensor",
+          "chip"
+        ],
+        "excluded_leaf_ids": []
+      },
+      {
+        "annotation_id": "a1",
+        "document_id": "doc-0",
+        "issued_tree": "tree-a",
+        "allowed_leaf_ids": [
+          "sensor",
+          "model"
+        ],
+        "excluded_leaf_ids": []
+      },
+      {
+        "annotation_id": "a2",
+        "document_id": "doc-1",
+        "issued_tree": "tree-a",
+        "allowed_leaf_ids": [
+          "model",
+          "tool"
+        ],
+        "excluded_leaf_ids": [
+          "tool"
+        ]
+      }
+    ],
+    "revision_edit": {
+      "new_leaf": "quantum-chip",
+      "parent": "hardware",
+      "move": {
+        "tool": "hardware"
+      },
+      "initial_weights": {
+        "all": "initial_all",
+        "hardware": "initial_hardware",
+        "software": "initial_software"
+      }
+    },
+    "prediction": {
+      "min_probability": 0.4,
+      "min_support": 1
+    },
+    "parameter_node_order": [
+      "all",
+      "hardware",
+      "software"
+    ]
+  },
+  "tensors": {
+    "X": [
+      [
+        0.2,
+        0.4
+      ],
+      [
+        -0.1,
+        0.3
+      ]
+    ],
+    "edge_weight": [
+      [
+        [
+          0.2,
+          0.1
+        ],
+        [
+          -0.2,
+          0.3
+        ]
+      ],
+      [
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.1,
+          0.2
+        ]
+      ],
+      [
+        [
+          -0.2,
+          0.4
+        ],
+        [
+          0.3,
+          0.1
+        ]
+      ]
+    ],
+    "edge_bias": [
+      [
+        0,
+        0.1
+      ],
+      [
+        0.1,
+        -0.1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "initial_all": [
+      [
+        -0.001654,
+        0.017008
+      ],
+      [
+        0.092923,
+        -0.053815
+      ]
+    ],
+    "initial_hardware": [
+      [
+        0.128397,
+        -0.098092
+      ],
+      [
+        0.141189,
+        -0.078567
+      ],
+      [
+        -0.010574,
+        0.119328
+      ],
+      [
+        -0.043268,
+        0.002415
+      ]
+    ],
+    "initial_software": [
+      [
+        -0.016458,
+        -0.061773
+      ]
+    ]
+  }
+}
